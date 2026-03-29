@@ -728,7 +728,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-portfolio h3 {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 24px;
 }
@@ -739,7 +739,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-group-title {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -752,7 +752,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-row-label {
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 6px;
@@ -765,13 +765,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-tag {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 6px;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   color: var(--text-secondary);
+}
+
+/* Training Comic */
+.training-comic {
+  margin-top: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  max-width: 800px;
+}
+
+.training-comic img {
+  width: 100%;
+  height: auto;
 }
 
 /* --- Why Us Section --- */
@@ -852,14 +866,23 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+.why-us-comic-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .why-us-punchline {
-  margin-top: 32px;
+  margin-top: 24px;
   text-align: center;
   font-family: 'Outfit', sans-serif;
   font-size: 1.375rem;
   font-weight: 400;
   color: var(--text-muted);
   font-style: italic;
+}
+
+.why-us-punchline p {
+  margin-bottom: 4px;
 }
 
 /* --- Leadership Section --- */
@@ -905,15 +928,22 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-4px);
 }
 
+.credential-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .credential-card-icon {
   width: 50px;
   height: 50px;
+  min-width: 50px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  margin-bottom: 16px;
   background: rgba(127,119,221,0.15);
   color: var(--accent-purple);
 }
@@ -922,7 +952,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 8px;
 }
 
 .credential-card p {

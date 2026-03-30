@@ -6,8 +6,8 @@
 /* --- CSS Custom Properties --- */
 :root {
   --bg-primary: #0B1221;
-  --bg-card: rgba(255,255,255,0.03);
-  --bg-card-hover: rgba(255,255,255,0.06);
+  --bg-card: rgba(255,255,255,0.05);
+  --bg-card-hover: rgba(255,255,255,0.09);
   --border-card: rgba(255,255,255,0.06);
   --border-hover: rgba(255,255,255,0.12);
   --text-primary: #FFFFFF;
@@ -22,6 +22,17 @@
   --accent-green: #97C459;
   --nav-height: 72px;
   --max-width: 1200px;
+}
+
+/* --- Vanta.js Background --- */
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* --- Reset & Base --- */
@@ -420,12 +431,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Services Section --- */
-.services {
+.consulting {
   padding: 24px 0;
   position: relative;
 }
 
-.services-grid {
+.consulting-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -780,12 +791,24 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-card);
-  max-width: 800px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .training-comic img {
   width: 100%;
   height: auto;
+}
+
+.training-comic-caption {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* --- Why Us Section --- */
@@ -1108,15 +1131,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Grid Background Pattern --- */
-.grid-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
 
 /* --- Decorative Orbs --- */
 .section-orb {
@@ -1149,7 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.125rem;
   }
 
-  .services-grid {
+  .consulting-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1222,7 +1236,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 5rem;
   }
 
-  .services,
+  .hero-content {
+    max-width: none;
+  }
+
+  .hero-tagline-secondary {
+    white-space: nowrap;
+  }
+
+  .consulting,
   .training,
   .why-us,
   .leadership,
